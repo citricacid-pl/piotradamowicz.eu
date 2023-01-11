@@ -3,6 +3,7 @@ import { COLORS } from '../constants/colors';
 
 const GlobalStyles = createGlobalStyle`
   html {
+    --max-content-size: 1000px;
     --primary-color: ${COLORS.primary};
     --primary2-color: ${COLORS.primary2};
     --primary3-color: ${COLORS.primary3};

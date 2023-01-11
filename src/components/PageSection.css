@@ -1,5 +1,5 @@
 .PageSection {
-    max-width: 1000px;
+    max-width: var(--max-content-size);
     padding: 1rem;
     margin: auto;
 }
