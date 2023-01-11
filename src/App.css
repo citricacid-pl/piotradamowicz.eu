@@ -1,4 +1,9 @@
 .App-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     max-width: 90vw;
     height: 56vh;
     margin: auto;
@@ -17,5 +22,6 @@
     background: linear-gradient(180deg, rgba(237, 39, 126, 0) 0, #120034 10%);
     min-height: 41vh;
     padding-top: 3vh;
+    top: 56vh;
     /*display: none;*/
 }

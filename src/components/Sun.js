@@ -36,14 +36,11 @@ const Sun = () => {
   return (
     <div style={{
       height: size,
-      position: 'absolute',
+      position: 'fixed',
       top: `calc(60vh - (${size} / 1.5))`,
       left: `calc(50vw - (${size} / 2))`,
     }}>
-      {/*<SunPart />*/}
       <SunCircle />
-      {/*<SunPart size={20} offset={100} />*/}
-      {/*<SunPart size={10} offset={160} />*/}
     </div>
   );
 };
