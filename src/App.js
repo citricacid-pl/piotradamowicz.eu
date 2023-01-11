@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import PiotrAdamowiczPicture from './assets/PiotrAdamowiczPicture.jpg';
+import GlobalStyles from './components/GlobalStyles';
+import Sun from './components/Sun';
 
 function App() {
   return (
     <div className="App">
+      <GlobalStyles />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <nav>
+          Logo, Home, About, Projects, Contact
+        </nav>
+        <img src={PiotrAdamowiczPicture} className="App-picture" alt="Piotr Adamowicz" />
+        <Sun />
+        <h1>Piotr Adamowicz <br /><small>JavaScript/TypeScript web and mobile developer</small></h1>
       </header>
+      <div className="App-content">
+        <h2>About</h2>
+        <h2>Projects</h2>
+      </div>
     </div>
   );
 }
