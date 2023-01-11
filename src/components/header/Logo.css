@@ -1,0 +1,58 @@
+.Logo {
+    font-family: 'Faster One', monospace;
+    font-size: 13vmin;
+    line-height: 10vmin;
+    padding-left: 3%;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Logo-gradient {
+    --angle: 176deg;
+    position: absolute;
+    top: 0;
+    padding-left: 4%;
+    animation-name: swingGradient;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    background: linear-gradient(var(--angle), #35a7ff 0%, #080516 29%, #073bee 30%, #70a0f4 31%, #c0d8fc 39%, #ecf7fd 48%, #00000b 57%, #7216a1 63%, #080516 65%, #a721da 67%, #4f1279 79%, #080516 81%, #b12be2 96%, #c542f7 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.8;
+}
+
+.Logo-shadow {
+    -webkit-text-stroke: revert;
+    top: 0;
+    padding-left: 4%;
+    text-shadow: 5px 5px 0 orange;
+}
+
+.Logo-row {
+    position: relative;
+    height: 10vmin;
+    width: 100%;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 176deg;
+}
+
+@keyframes swingGradient {
+    0% {
+        --angle: 179deg;
+    }
+    50% {
+        --angle: 181deg;
+    }
+    to {
+        --angle: 179deg;
+    }
+}

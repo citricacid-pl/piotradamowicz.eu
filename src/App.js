@@ -1,6 +1,7 @@
 import './App.css';
 import PiotrAdamowiczPicture from './assets/PiotrAdamowiczPicture.jpg';
 import GlobalStyles from './components/GlobalStyles';
+import Logo from './components/header/Logo';
 import PageSection from './components/PageSection';
 import Sun from './components/Sun';
 
@@ -13,7 +14,8 @@ function App() {
           Logo, Home, About, Projects, Contact
         </nav>
         <img src={PiotrAdamowiczPicture} className="App-picture" alt="Piotr Adamowicz" />
-        <h1>Piotr Adamowicz <br /><small>JavaScript/TypeScript web and mobile developer</small></h1>
+        <Logo />
+        <h1><small>JavaScript/TypeScript web and mobile developer</small></h1>
       </header>
       <Sun />
       <div className="App-content">
