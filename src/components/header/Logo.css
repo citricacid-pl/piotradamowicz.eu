@@ -1,6 +1,6 @@
 .Logo {
     font-family: 'Faster One', monospace;
-    font-size: 13vmin;
+    font-size: 11vmin;
     line-height: 10vmin;
     padding-left: 3%;
     overflow: visible;
@@ -10,7 +10,7 @@
 }
 
 .Logo-gradient {
-    --angle: 176deg;
+    --angle: 179deg;
     position: absolute;
     top: 0;
     padding-left: 4%;

@@ -7,11 +7,11 @@ const GlobalStyles = createGlobalStyle`
     --primary2-color: ${COLORS.primary2};
     --primary3-color: ${COLORS.primary3};
     --secondary-color: ${COLORS.secondary};
-  }
-  body {
     background: ${COLORS.primary};
-    background: linear-gradient(180deg, ${COLORS.primary} 0%, ${COLORS.primary2} 20%, ${COLORS.primary3} 58%, ${COLORS.primary} 60%);
-    background-repeat: no-repeat;
+  }
+
+  body {
+    background: linear-gradient(180deg, ${COLORS.primary} 0%, ${COLORS.primary2} 20%, ${COLORS.primary3} 58%, ${COLORS.primary} 60%) no-repeat;
     height: 100vh;
     color: ${COLORS.text};
   }
