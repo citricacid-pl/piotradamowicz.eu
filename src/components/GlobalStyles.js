@@ -16,6 +16,10 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     color: ${COLORS.text};
   }
+  
+  a {
+    color: ${COLORS.secondary};
+  }
 `;
 
 export default GlobalStyles;
