@@ -28,12 +28,39 @@ function App() {
           <p>This particular page was done with React.js and some CSS.</p>
           <p>To contact me please visit my <a href="https://www.linkedin.com/in/piotradamowicz/" target="_blank"
             rel="noopener noreferrer">LinkedIn profile</a></p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
+          <p>long...</p>
         </PageSection>
 
         {/*<h2>Projects</h2>*/}
         {/*<h2>Contact</h2>*/}
-        <Perspective />
       </div>
+      <Perspective />
     </div>
   );
 }

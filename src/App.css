@@ -21,7 +21,7 @@
     background: #120034;
     background: linear-gradient(180deg, rgba(237, 39, 126, 0) 0, #120034 10%);
     min-height: 41vh;
-    padding-top: 3vh;
+    padding-top: 30px;
     top: 56vh;
     /*display: none;*/
 }
