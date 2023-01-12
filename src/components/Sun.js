@@ -1,5 +1,7 @@
+import { useContext } from 'react';
 import styled from 'styled-components';
 import { COLORS } from '../constants/colors';
+import { AppContext } from '../context/AppContext';
 
 // const size = '40vmin';
 const size = '40vh';
@@ -33,6 +35,8 @@ const SunCircle = styled.div`
 // };
 
 const Sun = () => {
+  const { scroll, percent } = useContext(AppContext);
+
   return (
     <div style={{
       height: size,
@@ -40,6 +44,7 @@ const Sun = () => {
       top: `calc(60vh - (${size} / 1.5))`,
       left: `calc(50vw - (${size} / 2))`,
     }}>
+      <div>Scroll {scroll}, percent {percent}</div>
       <SunCircle />
     </div>
   );
