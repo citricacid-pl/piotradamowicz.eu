@@ -35,7 +35,7 @@ const SunCircle = styled.div`
 // };
 
 const Sun = () => {
-  const { scroll, percent } = useContext(AppContext);
+  const { percent } = useContext(AppContext);
 
   return (
     <div style={{
@@ -43,8 +43,11 @@ const Sun = () => {
       position: 'fixed',
       top: `calc(60vh - (${size} / 1.5))`,
       left: `calc(50vw - (${size} / 2))`,
+      opacity: Math.round(percent) / 100,
+      transition: 'opacity',
+      transitionTimingFunction: 'ease-out',
+      transitionDuration: '0.5s',
     }}>
-      <div>Scroll {scroll}, percent {percent}</div>
       <SunCircle />
     </div>
   );
