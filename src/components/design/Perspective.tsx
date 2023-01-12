@@ -5,7 +5,9 @@ const Perspective: FC = () => {
   return (
     <div className="Perspective">
       <div className="Perspective-world">
-        <div className="Perspective-item"></div>
+        <div className="Perspective-item">
+          <div className="Perspective-mask"></div>
+        </div>
       </div>
     </div>
   );

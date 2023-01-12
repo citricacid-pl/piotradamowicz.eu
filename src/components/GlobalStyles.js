@@ -18,7 +18,13 @@ const GlobalStyles = createGlobalStyle`
   }
   
   a {
+    color: ${COLORS.secondary2};
+  }
+  a:hover {
     color: ${COLORS.secondary};
+  }
+  a:visited {
+    color: ${COLORS.primary3};
   }
 `;
 

@@ -4,6 +4,7 @@
     position: fixed;
     top: 56vh;
     bottom: 0;
+    background: linear-gradient(180deg, rgba(237, 39, 126, 0) 0, #120034 10%);
 }
 
 .Perspective-world {
@@ -18,8 +19,8 @@
 .Perspective-item {
     transform: rotateX(45deg) translateX(-25%) translateZ(10vh);
     background:
-            linear-gradient(90deg, #ff000080 0, #00000000 2px, #00000000 20px),
-            linear-gradient(0, #ff000080 0, #ff000050 2px, #00000000 15px);
+            linear-gradient(90deg, #ED277E80 0, #00000000 2px, #00000000 20px),
+            linear-gradient(0, #ED277E80 0, #ED277E40 2px, #00000000 15px);
     background-size: 42px 42px;
     background-position-x: 10px;
     background-position-y: 10px;
@@ -34,6 +35,12 @@
     animation-duration: 1s, 7s;
     animation-iteration-count: infinite;
     animation-timing-function: linear, ease-in-out;
+}
+
+.Perspective-mask {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--primary-color) 0, #00000000 80%);
 }
 
 @keyframes verticalBg {

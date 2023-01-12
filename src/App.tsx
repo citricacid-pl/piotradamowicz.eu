@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './App.css';
 import PiotrAdamowiczPicture from './assets/PiotrAdamowiczPicture.jpg';
 import Perspective from './components/design/Perspective';
@@ -8,13 +9,30 @@ import Sun from './components/Sun';
 import { COLORS } from './constants/colors';
 
 function App() {
+  const [scroll, setScroll] = useState(0);
+
+  const scrollEvent = (event: any): void => {
+    if (!event) {
+      return;
+    }
+    let scrollY = event?.currentTarget?.scrollY || 0;
+    setScroll(scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollEvent);
+    return () => {
+      window.removeEventListener('scroll', scrollEvent);
+    };
+  }, []);
+
   return (
     <div className="App">
       <GlobalStyles />
       <Sun />
       <header className="App-header">
         <nav>
-          Logo, Home, About, Projects, Contact
+          Logo, Home, About, Projects, Contact {scroll}
         </nav>
         <img src={PiotrAdamowiczPicture} className="App-picture" alt="Piotr Adamowicz" />
         <Logo />
