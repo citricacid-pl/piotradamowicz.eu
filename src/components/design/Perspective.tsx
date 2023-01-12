@@ -1,6 +1,6 @@
 import { FC, useContext, useEffect, useState } from 'react';
-import './Perspective.css';
 import { AppContext } from '../../context/AppContext';
+import './Perspective.css';
 
 const Perspective: FC = () => {
   const { percent } = useContext(AppContext);
@@ -15,13 +15,13 @@ const Perspective: FC = () => {
   }, [percent]);
 
   return (
-    <div className="Perspective" style={{
-      opacity: Math.round(minPercent) / 100,
-      transition: 'opacity',
-      transitionTimingFunction: 'ease-out',
-      transitionDuration: '0.5s',
-    }}>
-      <div className="Perspective-world">
+    <div className="Perspective">
+      <div className="Perspective-world" style={{
+        opacity: Math.round(minPercent) / 100,
+        transition: 'opacity',
+        transitionTimingFunction: 'ease-out',
+        transitionDuration: '0.5s',
+      }}>
         <div className="Perspective-item">
           <div className="Perspective-mask"></div>
         </div>
