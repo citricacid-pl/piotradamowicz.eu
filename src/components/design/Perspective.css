@@ -1,0 +1,56 @@
+.Perspective {
+    /*border: 1px solid white;*/
+    height: 45vh;
+    width: 100vw;
+    position: fixed;
+    top: 56vh;
+}
+
+.Perspective-world {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective-origin: 50% 60%;
+    perspective: 300px;
+}
+
+/*(100, 0, 0, 41deg)*/
+.Perspective-item {
+    transform: rotateX(45deg) translateX(-25%) translateZ(100px);
+    background: linear-gradient(90deg, #ff000080 0, #00000000 2px, #00000000 20px), linear-gradient(0, #ff000080 0, #ff000080 2px, #00000000 20px);
+    background-repeat: repeat;
+    background-size: 42px 42px;
+    background-position-x: 10px;
+    background-position-y: 10px;
+    display: block;
+    position: absolute;
+    width: 200%;
+    height: 100%;
+
+    line-height: 100px;
+    text-align: center;
+    animation-name: verticalBg, horizontalBg;
+    animation-duration: 1s, 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear, ease-in-out;
+}
+
+@keyframes verticalBg {
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: 42px;
+    }
+}
+@keyframes horizontalBg {
+    0% {
+        background-position-x: 0;
+    }
+    50% {
+        background-position-x: 100px;
+    }
+    100% {
+        background-position-x: 0;
+    }
+}

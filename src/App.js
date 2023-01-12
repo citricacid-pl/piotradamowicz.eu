@@ -1,5 +1,6 @@
 import './App.css';
 import PiotrAdamowiczPicture from './assets/PiotrAdamowiczPicture.jpg';
+import Perspective from './components/design/Perspective';
 import GlobalStyles from './components/GlobalStyles';
 import Logo from './components/header/Logo';
 import PageSection from './components/PageSection';
@@ -31,6 +32,7 @@ function App() {
 
         {/*<h2>Projects</h2>*/}
         {/*<h2>Contact</h2>*/}
+        <Perspective />
       </div>
     </div>
   );
