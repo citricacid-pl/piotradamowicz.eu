@@ -7,8 +7,8 @@ import Logo from './components/header/Logo';
 import PageSection from './components/PageSection';
 import Sun from './components/Sun';
 import { COLORS } from './constants/colors';
-import AppContextProvider from './context/AppContext';
-import WindowWatcher from './context/WindowWatcher';
+import ScrollWatchContextProvider from './context/ScrollWatchContext';
+import WindowWatcher from './components/utils/WindowWatcher';
 
 function App() {
   const contentRef = useRef<any>(null);
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <AppContextProvider>
+      <ScrollWatchContextProvider>
         <div className="App">
           <GlobalStyles />
           <Sun />
@@ -83,7 +83,7 @@ function App() {
           <Perspective />
           {el ? <WindowWatcher element={el} /> : null}
         </div>
-      </AppContextProvider>
+      </ScrollWatchContextProvider>
     </>
   );
 }

@@ -1,9 +1,9 @@
 import { FC, useContext, useEffect, useState } from 'react';
-import { AppContext } from '../../context/AppContext';
+import { ScrollWatchContext } from '../../context/ScrollWatchContext';
 import './Perspective.css';
 
 const Perspective: FC = () => {
-  const { percent } = useContext(AppContext);
+  const { percent } = useContext(ScrollWatchContext);
   const [minPercent, setMinPercent] = useState(30);
 
   useEffect(() => {

@@ -1,9 +1,9 @@
 import React, { FC, useContext } from 'react';
-import { AppContext } from '../../context/AppContext';
+import { ScrollWatchContext } from '../../context/ScrollWatchContext';
 import './Logo.css';
 
 const Logo: FC = () => {
-  const { percent } = useContext(AppContext);
+  const { percent } = useContext(ScrollWatchContext);
 
   return (
     <h1 className="Logo" style={{

@@ -1,12 +1,12 @@
 import { useContext, useEffect, FC, useState } from 'react';
-import { AppContext } from './AppContext';
+import { ScrollWatchContext } from '../../context/ScrollWatchContext';
 
 type Props = {
   element: HTMLElement;
 };
 
 const WindowWatcher: FC<Props> = ({ element }) => {
-  const { setScroll, setSize } = useContext(AppContext);
+  const { setScroll, setSize } = useContext(ScrollWatchContext);
   const [sizeIsSet, setSizeIsSet] = useState(false);
 
   const scrollEvent = (event: any): void => {

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
 import { COLORS } from '../constants/colors';
-import { AppContext } from '../context/AppContext';
+import { ScrollWatchContext } from '../context/ScrollWatchContext';
 
 // const size = '40vmin';
 const size = '40vh';
@@ -35,7 +35,7 @@ const SunCircle = styled.div`
 // };
 
 const Sun = () => {
-  const { percent } = useContext(AppContext);
+  const { percent } = useContext(ScrollWatchContext);
 
   return (
     <div style={{
