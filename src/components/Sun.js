@@ -13,7 +13,10 @@ const SunCircle = styled.div`
   height: ${size};
   margin: auto;
   border-radius: 50%;
-  box-shadow: 0 0 30px 10px ${COLORS.secondary2};
+  box-shadow:
+          0 0 60px 40px ${COLORS.secondary2}, 
+          0 0 30px 10px ${COLORS.secondary2} inset,
+          0 0 180px 140px ${COLORS.primary3};
 `;
 
 // const SunPart = ({ size = 100, offset = 0 }) => {
