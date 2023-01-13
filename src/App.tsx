@@ -1,14 +1,13 @@
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
 import ScrollWatchContextProvider from './context/ScrollWatchContext';
-import Root from './pages/Root';
+import router from './router';
 
 function App() {
-
   return (
     <>
       <ScrollWatchContextProvider>
-        {/* TODO Prepare router */}
-        <Root />
+        <RouterProvider router={router} />
       </ScrollWatchContextProvider>
     </>
   );

@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
 import PiotrAdamowiczPicture from '../assets/PiotrAdamowiczPicture.jpg';
 import Perspective from '../components/design/Perspective';
 import GlobalStyles from '../components/GlobalStyles';
@@ -6,7 +7,6 @@ import Logo from '../components/header/Logo';
 import Sun from '../components/Sun';
 import WindowWatcher from '../components/utils/WindowWatcher';
 import { COLORS } from '../constants/colors';
-import About from './About';
 
 const Root = () => {
   const measuredRef = useRef<any>(null);
@@ -35,8 +35,7 @@ const Root = () => {
           developer</small></h1>
       </header>
       <div className="App-content">
-        {/* TODO Here will come the <Outlet /> */}
-        <About />
+        <Outlet />
       </div>
       <Perspective />
       {measuredElement ? <WindowWatcher element={measuredElement} /> : null}
