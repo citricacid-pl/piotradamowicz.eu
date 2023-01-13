@@ -1,4 +1,4 @@
-import { useContext, useEffect, FC } from 'react';
+import { useContext, useEffect, FC, useState } from 'react';
 import { AppContext } from './AppContext';
 
 type Props = {
@@ -7,19 +7,24 @@ type Props = {
 
 const WindowWatcher: FC<Props> = ({ element }) => {
   const { setScroll, setSize } = useContext(AppContext);
+  const [sizeIsSet, setSizeIsSet] = useState(false);
 
   const scrollEvent = (event: any): void => {
     if (!event) {
       return;
     }
     setScroll(event?.currentTarget?.scrollY || 0);
+    if (!sizeIsSet) {
+      resizeEvent();
+    }
   };
 
-  const resizeEvent = (event: unknown): void => {
+  const resizeEvent = (): void => {
     if (!(element?.clientHeight)) {
       return;
     }
     setSize(element.clientHeight);
+    setSizeIsSet(true);
   };
 
   useEffect(() => {
