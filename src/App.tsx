@@ -11,17 +11,17 @@ import ScrollWatchContextProvider from './context/ScrollWatchContext';
 import WindowWatcher from './components/utils/WindowWatcher';
 
 function App() {
-  const contentRef = useRef<any>(null);
-  const [el, setEl] = useState(null);
+  const measuredRef = useRef<any>(null);
+  const [measuredElement, setMeasuredElement] = useState(null);
 
   useEffect(() => {
-    if (!contentRef?.current) {
+    if (!measuredRef?.current) {
       return;
     }
     setTimeout(() => {
-      setEl(contentRef?.current);
+      setMeasuredElement(measuredRef?.current);
     }, 0);
-  }, [contentRef, setEl]);
+  }, [measuredRef, setMeasuredElement]);
 
   return (
     <>
@@ -29,7 +29,7 @@ function App() {
         <div className="App">
           <GlobalStyles />
           <Sun />
-          <header className="App-header" ref={contentRef}>
+          <header className="App-header" ref={measuredRef}>
             <nav>
               Logo, Home, About, Projects, Contact
             </nav>
@@ -81,7 +81,7 @@ function App() {
             {/*<h2>Contact</h2>*/}
           </div>
           <Perspective />
-          {el ? <WindowWatcher element={el} /> : null}
+          {measuredElement ? <WindowWatcher element={measuredElement} /> : null}
         </div>
       </ScrollWatchContextProvider>
     </>
