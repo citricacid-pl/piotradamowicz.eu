@@ -36,6 +36,7 @@ const SunCircle = styled.div`
 
 const Sun = () => {
   const { percent } = useContext(ScrollWatchContext);
+  const positionMax = 50;
 
   return (
     <div style={{
@@ -43,10 +44,11 @@ const Sun = () => {
       position: 'fixed',
       top: `calc(60vh - (${size} / 1.5))`,
       left: `calc(50vw - (${size} / 2))`,
-      opacity: Math.round(percent) / 100,
-      transition: 'opacity',
+      opacity: (Math.round(percent * 3) / 100) - 2,
+      transition: 'opacity, transform',
       transitionTimingFunction: 'ease-out',
-      transitionDuration: '0.5s',
+      transitionDuration: '0.5s, 0.3s',
+      transform: `translate(0, ${positionMax - positionMax * percent / 100}px)`,
     }}>
       <SunCircle />
     </div>
