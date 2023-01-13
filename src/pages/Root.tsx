@@ -4,6 +4,7 @@ import PiotrAdamowiczPicture from '../assets/PiotrAdamowiczPicture.jpg';
 import Perspective from '../components/design/Perspective';
 import GlobalStyles from '../components/GlobalStyles';
 import Logo from '../components/header/Logo';
+import Navigation from '../components/header/Navigation';
 import Sun from '../components/Sun';
 import WindowWatcher from '../components/utils/WindowWatcher';
 import { COLORS } from '../constants/colors';
@@ -25,10 +26,8 @@ const Root = () => {
     <div className="App">
       <GlobalStyles />
       <Sun />
+      <Navigation />
       <header className="App-header" ref={measuredRef}>
-        <nav>
-          Logo, Home, About, Projects, Contact
-        </nav>
         <img src={PiotrAdamowiczPicture} className="App-picture" alt="Piotr Adamowicz" />
         <Logo />
         <h1 style={{ color: COLORS.primary, textAlign: 'center' }}><small>JavaScript/TypeScript web and mobile
