@@ -17,8 +17,55 @@
 .Navigation-links {
     list-style: none;
     margin: 0;
+    transition: transform ease-in-out 1s;
 }
 .Navigation-links li {
     padding-left: 1em;
     display: inline-block;
+}
+
+.Navigation-open,
+.Navigation-links li.Navigation-close {
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .Navigation-links li.Navigation-close {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+
+    .Navigation-open {
+        display: block;
+    }
+    .Navigation-open:active,
+    .Navigation-close:active {
+        color: var(--primary3-color);
+    }
+
+    .Navigation-links {
+        transform: translateY(-220px);
+        width: 100%;
+        /*background: white;*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-height: 50vh;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid white;
+        background: var(--primary-color);
+        box-shadow: 0 0 10px var(--primary-color);
+    }
+    .Navigation-links li {
+        display: block;
+        padding: 1em;
+    }
+
+    .Navigation-links_opened {
+        transform: translateY(0);
+    }
 }
