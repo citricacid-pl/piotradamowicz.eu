@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 // Static files
-app.use(express.static(path.join(__dirname, '..', 'build', 'static')));
+app.use(express.static(path.join(__dirname, '..', 'build')));
 
 // Root redirects
 app.get('/', function (req, res) {
