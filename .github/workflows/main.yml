@@ -1,0 +1,26 @@
+name: CI -> Deploy website via SFTP
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v2
+      
+      - name: Install dependencies
+      - run: npm install
+      
+      - name: Build project
+      - run: npm run build
+      
+      - name: Upload built project
+        uses: airvzxf/ftp-deployment-action@latest
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          remote_dir: "/home/piotrada/www"
+          local_dir: "./build"
+          delete: "true"
