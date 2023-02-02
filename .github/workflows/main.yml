@@ -7,14 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
-      
+        uses: actions/checkout@v2
+
       - name: Install dependencies
-      - run: npm install
-      
+        run: npm install
+
       - name: Build project
-      - run: npm run build
-      
+        run: npm run build
+
       - name: Upload built project
         uses: airvzxf/ftp-deployment-action@latest
         with:
