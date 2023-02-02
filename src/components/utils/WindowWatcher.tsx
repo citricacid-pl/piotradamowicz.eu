@@ -34,7 +34,7 @@ const WindowWatcher: FC<Props> = ({ element }) => {
       window.removeEventListener('scroll', scrollEvent);
       window.removeEventListener('resize', resizeEvent);
     };
-  }, []);
+  }, []); //eslint-disable-line react-hooks/exhaustive-deps
 
   return <></>;
 };
