@@ -16,12 +16,24 @@ jobs:
         run: npm run build
 
       - name: Upload built project
-        uses: airvzxf/ftp-deployment-action@latest
+#        uses: airvzxf/ftp-deployment-action@latest
+        uses: sand4rt/ftp-deployer@v1.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
+          sftp: true
+          host: ${{ secrets.FTP_SERVER }}
+          port: 22
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          remote_dir: "/home/piotrada/www"
-          local_dir: "./build"
-          delete: "true"
-          ftp_ssl_allow: "true"
+          remote_folder: '/home/piotrada/www'
+          local_folder: './build'
+          cleanup: false
+          include: '[ "*", "**/*" ]'
+          exclude: '["node_modules/**", "_secret.php", ".github/**", ".git/**", "*.env"]'
+          passive: true
+#          server: ${{ secrets.FTP_SERVER }}
+#          user: ${{ secrets.FTP_USERNAME }}
+#          password: ${{ secrets.FTP_PASSWORD }}
+#          remote_dir: "/home/piotrada/www"
+#          local_dir: "./build"
+#          delete: "true"
+#          ftp_ssl_allow: "true"
