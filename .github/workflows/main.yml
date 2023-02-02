@@ -24,3 +24,4 @@ jobs:
           remote_dir: "/home/piotrada/www"
           local_dir: "./build"
           delete: "true"
+          ftp_ssl_allow: "true"
