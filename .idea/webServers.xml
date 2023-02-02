@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b63b9939-0c82-40cf-a3f8-c5b8f6a17e55" name="piotradamowicz.eu" url="http://piotradamowicz.eu">
+        <fileTransfer rootFolder="/home/piotrada/" accessType="SFTP" host="ftp.cluster014.hosting.ovh.net" port="22" sshConfigId="ac5569dd-654b-46f8-aecc-a4631cb558c6" sshConfig="piotrada@ftp.cluster014.hosting.ovh.net:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
